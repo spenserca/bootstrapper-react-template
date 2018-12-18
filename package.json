@@ -1,10 +1,8 @@
 {
   "name": "bootstrapper-react-template",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "moment": "^2.22.2",
-    "plotly.js-basic-dist": "^1.41.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.5.2",
@@ -14,6 +12,7 @@
   "scripts": {
     "build": "rm -rf dist & webpack --config ./config/webpack.config.js --mode production",
     "build:css": "postcss --config config/postcss.config.js src/styles/index.css -o src/index.css",
+    "initialize": "yarn && yarn build:css",
     "lint": "eslint --color -c ./config/.eslintrc.js '**/*.js'",
     "lint:file": "eslint --color -c ./config/.eslintrc.js",
     "start": "webpack-dev-server --config ./config/webpack.config.js --mode development",
